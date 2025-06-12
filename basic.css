@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: 'Muli', sans-serif;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+/* welcome note $ picture */
+.hero {
+    /* background-color: #d04a4a; */
+    background-image: url(Img/pexels-cottonbro-4722571.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 89, 82, 0.7);
+    z-index: -4;
+}
+
+/* text (hello) */
+.hero h1 {
+    font-size: 70px;
+    margin: -20px 0 20px;
+}
+
+/* name */
+.hero h2 {
+    font-size: 25px;
+    left: 10px;
+}
+
+/* web design */
+.hero p {
+    color: #ff0000;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+.text {
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 150px;
+    border-radius: 60px;
+}
+
+.motivation  {
+    h1 {
+        color: rgba(0, 255, 229, 0.7);
+        font-size: 30px;
+        text-transform: uppercase;
+        /* font-family: 'Courier New', Courier, monospace; */
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        color: rgb(255, 2, 2);
+    }
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav.visible {
+    transform: translateX(0);
+}
+
+.nav.visible {
+    transform: translateX(0);
+}
+
+.nav-black {
+    background-color: rgb(34, 31, 31);
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+    transition-delay: 0s;
+}
+
+.nav-red {
+    background-color: rgb(229, 9, 20);
+    width: 95%;
+    transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+    transition-delay: 0.2s;
+}
+
+.nav-white {
+    background-color: #fff;
+    width: 95%;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+
+.nav-white.visible {
+    transition-delay: 0.4s;
+}
+
+.close-btn {
+    opacity: 0.3s;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    /* margin: 5px 0; */
+}
+
+.list li a {
+    color: rgb(255, 2, 2);
+    font-size: 14px;
+    text-decoration: none;
+    padding-top: 14px 25px;
+}
+
+.list li a:hover {
+    background: #444;
+    color: #f7c08a;
+}
+
+.list ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+
+/* PROJECT */
+.project {
+    font-size: 150%;
+    margin: 20px 0;
+    margin-left: 30px;
+    padding: 0px 30px;
+    /* padding-top: 750px; */
+
+}
+
+.project h1 {
+    color: rgba(21, 182, 194, 0.7);
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+
+.lines {
+    padding-top: 600px;
+}
+
+.project-one ul {
+    padding: 30px 30px;
+    background-color: rgba(21, 182, 194, 0.7);
+    /* padding-top: 60px; */
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 60px; */
+}
+
+.p1 {
+    background-image: url(Img/port_item-1.jpg);
+}
+.p2 {
+    background-image: url(Img/port_item-2.jpg);
+}
+.p3 {
+    background-image: url(Img/port_item-3.jpg);
+}
+.p4 {
+    background-image: url(Img/port_item-4.jpg);
+}
+.p5 {
+    background-image: url(Img/port_item-5.jpg);
+}
+.p6 {
+    background-image: url(Img/port_item-6.jpg);
+}
+
+.container ul h1 a,
+h2 a,
+h3 a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    color: #444;
+    display: inline-flex;
+    padding: 60px;
+    text-align: center;
+    border: #444 2px solid;
+    justify-content: center;
+    font-size: 14px;
+    float: left;
+    width: 20%;
+    text-decoration: none;
+}
+
+.container ul h1  a:hover,
+#navbar ul li a.current {
+    background: #ccc;
+    color: rgba(21, 182, 194, 0.7);
+    z-index: -2;
+}
+
+.container ul h3 a:hover,
+ #navbar ul li a.current {
+    background: #ccc;
+    color: rgba(21, 182, 194, 0.7);
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    color: #333;
+    background: rgba(21, 182, 194, 0.7);
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    /* padding-top: 3%; */
+    /* padding-left: 30%; */
+}
+
+.btn:hover {
+    background: #ccc;
+    color: #333;
+}
+
+.more {
+    color: #d04a4a;
+    /* padding-left: 18px; */
+    text-align: center;
+    float: right;
+    padding-top: 2%;
+    
+}
+
+/* .container ul h2 a {
+    background-color: #f7c08a;
+    color: #444;
+    display: inline-flex;
+    padding: 30px;
+    text-align: center;
+    border: #444 2px solid;
+    justify-content: center;
+    border-radius: 3px 50px;
+    font-size: 10px;
+    float: left;
+    width: 50%;
+    text-decoration: none;
+} */
+
+/* .container ul h3 a {
+    background-color: #f7c08a;
+    color: #444;
+    display: inline-flex;
+    padding: 30px;
+    text-align: center;
+    border: #444 2px solid;
+    justify-content: center;
+    border-radius: 3px 60px;
+    font-size: 10px;
+    float: left;
+    width: 50%;
+    text-decoration: none;
+} */
+
+/* .nav ul h5 a {
+    background-color: red;
+    color: #fff;
+    display: inline-flex;
+    padding: 10px;
+    text-align: center;
+    border: #444 2px solid;
+    justify-content: center;
+    border-radius: 30px 5px;
+    font-size: 10px;
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+    text-decoration: none;
+} */
